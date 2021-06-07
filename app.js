@@ -33,7 +33,7 @@ $(document).ready(function () {
 
     $(document).keydown(function (e) {
 
-        if (e.shiftKey) {
+        if (e.which) {
             upperKB.show();
             lowerKB.hide();
         }
@@ -42,7 +42,7 @@ $(document).ready(function () {
 
     $(document).keyup(function (e) {
 
-        if (e.shiftKey) {
+        if (e.which) {
             upperKB.hide();
             lowerKB.show();
         }
@@ -53,7 +53,7 @@ $(document).ready(function () {
 
     $(document).keypress(function (e) {
 
-        $('#' + e.shiftKey).addClass('highlight');
+        $('#' + e.which).addClass('highlight');
 
         if (start == 0) {
             start = new Date();
