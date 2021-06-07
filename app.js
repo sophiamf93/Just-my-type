@@ -31,18 +31,18 @@ $(document).ready(function () {
     $('#sentence').html(highlight_sentence);
 
 
-    $(document).keydown(function () {
+    $(document).keydown(function (e) {
 
-        if (event.which == 16) {
+        if (e.shiftKey) {
             upperKB.show();
             lowerKB.hide();
         }
 
     })
 
-    $(document).keyup(function () {
+    $(document).keyup(function (e) {
 
-        if (event.which == 16) {
+        if (e.shiftKey) {
             upperKB.hide();
             lowerKB.show();
         }
@@ -51,9 +51,9 @@ $(document).ready(function () {
 
     })
 
-    $(document).keypress(function () {
+    $(document).keypress(function (e) {
 
-        $('#' + event.which).addClass('highlight');
+        $('#' + e.shiftKey).addClass('highlight');
 
         if (start == 0) {
             start = new Date();
