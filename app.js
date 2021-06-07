@@ -59,7 +59,7 @@ $(document).ready(function () {
             start = new Date();
         }
 
-        if (currentSentence.charCodeAt(letterIndex) == event.which) {
+        if (currentSentence.charCodeAt(letterIndex) == e.which) {
 
             $('#feedback').append('<span class="glyphicon glyphicon-ok"></span>');
             letterIndex++;
